@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#main-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 23rem;
+  border: 1px solid rgb(197, 197, 197);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgb(238, 238, 238);
+}
+
+#image-frame {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 95%;
+}
+
+#image-container {
+  width: 95%;
+  height: 90%;
+  position: relative;
+}
+
+#slide-container,
+#slide-img {
+  width: 100%;
+  height: 100%;
+}
+
+#previous-image,
+#next-image {
+  color: white;
+  position: absolute;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.4rem;
+}
+
+#previous-image:hover,
+#next-image:hover {
+  background-color: rgba(117, 117, 117, 0.3);
+  cursor: pointer;
+  color: white;
+}
+
+#previous-image {
+  left: 0;
+}
+
+#next-image {
+  right: 0;
+}
+
+#image-selection {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: rgb(124, 124, 124);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.active-dot {
+  background-color: black;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 450px) {
+  #main-container {
+    width: 27rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  #main-container {
+    width: 33rem;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  #main-container {
+    width: 40rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #main-container {
+    width: 45rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #main-container {
+    width: 60rem;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  #main-container {
+    width: 65rem;
+  }
+}
